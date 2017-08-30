@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="1045692112624-7hqbkrf6j45gqb2qotl6b66kjuubcmb5.apps.googleusercontent.com">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body ng-app="gmailApi">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -37,6 +38,13 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        @RenderSection("scripts", required: false)
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+        <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/App/app.js"></script>
+    <script src="~/Scripts/App/сontrollers/homeController.js"></script>
+    <script src="~/Scripts/App/directives/myLabels.js"></script>
+    <script src="~/Scripts/App/services/homeService.js"></script>
 </body>
 </html>

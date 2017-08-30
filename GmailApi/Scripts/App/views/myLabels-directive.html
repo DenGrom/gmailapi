@@ -1,0 +1,14 @@
+﻿<table>
+    <tr ng-repeat="label in Labels">
+        <td ng-if="$first" style="background-color:#f1f1f1">#</td>
+        <td ng-if="$first" style="background-color:#f1f1f1">Label Name</td>
+        <td ng-if="$first" style="background-color:#f1f1f1">Message List Visibility</td>
+        <td ng-if="$first" style="background-color:#f1f1f1">Label Type</td>
+
+
+        <td ng-if="!$first">{{$index}}</td>
+        <td ng-if="!$first">{{label.Name}}</td>
+        <td ng-if="!$first">{{label.MessageListVisibility | uppercase}}</td>
+        <td ng-if="!$first">{{label.Type}}</td>
+    </tr>
+</table>

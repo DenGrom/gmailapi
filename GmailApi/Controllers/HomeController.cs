@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GmailApi.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,15 @@ namespace GmailApi.Controllers
 {
     public class HomeController : Controller
     {
+        HomeService _service;
+        public HomeController()
+        {
+            _service = new HomeService();
+        }
+        [HttpGet]
         public ActionResult Index()
         {
+            //_service.GetSimple();
             return View();
         }
 
@@ -26,5 +34,13 @@ namespace GmailApi.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult GetInformations()
+        {
+            var getInformationsViewModel = _service.GetInformations();
+            return Json(getInformationsViewModel, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }
