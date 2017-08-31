@@ -24,6 +24,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("User", "AddUser", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -38,14 +39,16 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    @RenderSection("scripts", required: false)
     @*<script src="https://apis.google.com/js/platform.js" async defer></script>*@
 
-        <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/App/app.js"></script>
     <script src="~/Scripts/App/сontrollers/homeController.js"></script>
+    <script src="~/Scripts/App/сontrollers/userController.js"></script>
     <script src="~/Scripts/App/directives/myLabels.js"></script>
     <script src="~/Scripts/App/services/homeService.js"></script>
+    <script src="~/Scripts/App/services/userService.js"></script>
     <script src="~/Scripts/google-plus-signin.js"></script>
 </body>
 </html>

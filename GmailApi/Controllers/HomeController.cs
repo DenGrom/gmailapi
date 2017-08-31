@@ -41,6 +41,11 @@ namespace GmailApi.Controllers
             var getInformationsViewModel = _service.GetInformations();
             return Json(getInformationsViewModel, JsonRequestBehavior.AllowGet);
         }
+        [HttpGet]
+        public ActionResult AddUser()
+        {
 
+            return View();
+        }
     }
 }

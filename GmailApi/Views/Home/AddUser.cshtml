@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+<div ng-controller="userController" class="row">
+    <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" class="form-control" id="firstName" ng-model="user.firstName">
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" ng-model="user.lastName">
+    </div> 
+    <div class="form-group">
+        <label for="lastName">Email</label>
+        <input type="email" class="form-control" id="lastName" ng-model="user.email">
+    </div> 
+    <div class="form-group">
+        <button ng-click="addUser();">Add User</button>
+    </div> 
+
+</div>
+
+

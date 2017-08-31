@@ -163,8 +163,10 @@
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\directives\myLabels.js" />
     <Content Include="Scripts\App\services\homeService.js" />
+    <Content Include="Scripts\App\services\userService.js" />
     <Content Include="Scripts\App\views\myLabels-directive.html" />
     <Content Include="Scripts\App\сontrollers\homeController.js" />
+    <Content Include="Scripts\App\сontrollers\userController.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -199,6 +201,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\AddUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GmailJson\" />
