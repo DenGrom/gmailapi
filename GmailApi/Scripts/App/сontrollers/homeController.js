@@ -1,5 +1,7 @@
 ﻿app.controller('homeController', ["$http", "$scope", "homeService", function ($http, $scope, homeService) {
 
+    $scope.isSignIn = { stateIs: false };
+    console.log($scope.isSignIn);
     $scope.getInformations = function () {
         homeService.getInformationsFromService().then(function (success) {
             console.log(success);
@@ -9,7 +11,20 @@
         });
     };
 
-
+    $scope.$on('event:google-plus-signin-success', function (event, authResult) {
+        // Send login to server or save into cookie
+        console.log(event);
+        console.log(authResult.w3.U3);
+        if (authResult.w3.U3)
+        {
+            $scope.isSignIn.stateIs = true;
+            console.log($scope.isSignIn);
+            $scope.$digest();
+        }
+    });
+    $scope.$on('event:google-plus-signin-failure', function (event, authResult) {
+        // Auth failure or signout detected
+    });
     //    $scope.getInformations = function () {
 
     //    $http({

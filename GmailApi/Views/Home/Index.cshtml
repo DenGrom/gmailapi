@@ -5,11 +5,10 @@
 <div class="row" ng-controller="homeController">
     <div class="col-md-12">
         <h2>Get information</h2>
-        <a href="" ng-click="getInformations()" class="btn btn-primary" id="informations">Get informations</a>
+        <a href="" ng-click="getInformations()" class="btn btn-primary" id="informations" ng-show="isSignIn.stateIs">Get informations</a>
     </div>
     <br />
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <a href="#" onclick="signOut();">Sign out</a>
+    <google-plus-signin clientid="1045692112624-7hqbkrf6j45gqb2qotl6b66kjuubcmb5.apps.googleusercontent.com" ng-show="!isSignIn.stateIs"></google-plus-signin>
 
     <br />
     <h3>Labels</h3>

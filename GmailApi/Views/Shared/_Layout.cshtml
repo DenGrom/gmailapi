@@ -39,12 +39,13 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    @*<script src="https://apis.google.com/js/platform.js" async defer></script>*@
 
         <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/App/app.js"></script>
     <script src="~/Scripts/App/сontrollers/homeController.js"></script>
     <script src="~/Scripts/App/directives/myLabels.js"></script>
     <script src="~/Scripts/App/services/homeService.js"></script>
+    <script src="~/Scripts/google-plus-signin.js"></script>
 </body>
 </html>
