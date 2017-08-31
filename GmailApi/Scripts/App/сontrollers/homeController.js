@@ -1,6 +1,6 @@
 ﻿app.controller('homeController', ["$http", "$scope", "homeService", function ($http, $scope, homeService) {
 
-    $scope.isSignIn = { stateIs: false };
+    $scope.isSignIn = false;
     console.log($scope.isSignIn);
     $scope.getInformations = function () {
         homeService.getInformationsFromService().then(function (success) {
@@ -17,7 +17,7 @@
         console.log(authResult.w3.U3);
         if (authResult.w3.U3)
         {
-            $scope.isSignIn.stateIs = true;
+            $scope.isSignIn = true;
             console.log($scope.isSignIn);
             $scope.$digest();
         }
