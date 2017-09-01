@@ -217,6 +217,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GmailApi.Entities\GmailApi.Entities.csproj">
+      <Project>{B34133FB-E54D-4C4F-BBCD-D4080B866DB9}</Project>
+      <Name>GmailApi.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GmailApi.Services\GmailApi.Services.csproj">
       <Project>{CB4551EC-C0E4-4CD4-93FB-52EA61B01961}</Project>
       <Name>GmailApi.Services</Name>

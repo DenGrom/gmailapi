@@ -1,4 +1,5 @@
-﻿using GmailApi.Services;
+﻿using GmailApi.Entities;
+using GmailApi.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,12 @@ namespace GmailApi.Controllers
         {
 
             return View();
+        }
+        [HttpPost]
+        public ActionResult AddNewUser(User user)
+        {
+
+            return Json(true, JsonRequestBehavior.AllowGet);
         }
     }
 }
