@@ -93,6 +93,7 @@ namespace GmailApi.Services
             try
             {
                 _userRepository.Insert(user);
+                _userRepository.Save();
                 return true;
             }
             catch
