@@ -162,6 +162,7 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\directives\myLabels.js" />
+    <Content Include="Scripts\App\models\userModel.js" />
     <Content Include="Scripts\App\services\homeService.js" />
     <Content Include="Scripts\App\services\userService.js" />
     <Content Include="Scripts\App\views\myLabels-directive.html" />
