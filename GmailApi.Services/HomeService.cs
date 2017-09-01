@@ -1,4 +1,7 @@
-﻿using GmailApi.ViewModels.HomeViewModels;
+﻿using GmailApi.DataAccess;
+using GmailApi.DataAccess.Repositories;
+using GmailApi.Entities;
+using GmailApi.ViewModels.HomeViewModels;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Gmail.v1;
 using Google.Apis.Gmail.v1.Data;
@@ -17,6 +20,14 @@ namespace GmailApi.Services
 {
     public class HomeService
     {
+        ApplicationContext _applicationContext;
+        UserRepository _userRepository;
+        public HomeService()
+        {
+            _applicationContext = new ApplicationContext();
+            _userRepository = new UserRepository(_applicationContext);
+        }
+
         static string[] Scopes = { GmailService.Scope.GmailReadonly };
         static string ApplicationName = "Gmail API .NET Quickstart";
         public GetInformationsViewModel GetInformations()
@@ -76,6 +87,18 @@ namespace GmailApi.Services
             }
 
             return null;
+        }
+        public bool AddNewUser(User user)
+        {
+            try
+            {
+                _userRepository.Insert(user);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

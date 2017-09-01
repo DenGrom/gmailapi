@@ -51,8 +51,8 @@ namespace GmailApi.Controllers
         [HttpPost]
         public ActionResult AddNewUser(User user)
         {
-
-            return Json(true, JsonRequestBehavior.AllowGet);
+            var isSuccess = _service.AddNewUser(user);
+            return Json(isSuccess, JsonRequestBehavior.AllowGet);
         }
     }
 }
